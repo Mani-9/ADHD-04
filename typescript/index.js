@@ -1,23 +1,17 @@
-function calcularPromedio() {
-    var valor1 = parseFloat(document.getElementById('primerValor').value);
-    var valor2 = parseFloat(document.getElementById('segundoValor').value);
-    var valor3 = parseFloat(document.getElementById('tercerValor').value);
-    console.log("Valor 1: ".concat(valor1, ", Valor 2: ").concat(valor2, ", Valor 3: ").concat(valor3));
-    if (!isNaN(valor1) && !isNaN(valor2) && !isNaN(valor3)) {
-        var promedio = ((valor1 + valor2 + valor3) / 3);
-        document.getElementById('promedio').value = promedio.toFixed(2);
-        console.log("Promedio: ".concat(promedio.toFixed(2)));
+function promedio() {
+    /**Obtencion de los 3 valores y conversion a numero floatante */
+    var valor1 = parseFloat(document.getElementById("primerValor").value);
+    var valor2 = parseFloat(document.getElementById("segundoValor").value);
+    var valor3 = parseFloat(document.getElementById("tercerValor").value);
+    // Verificar si alguno de los valores es NaN (Not a Number)
+    if (isNaN(valor1) || isNaN(valor2) || isNaN(valor3)) {
+        // Si algún campo está vacío o no contiene un número válido, mostrar un mensaje de error
+        document.getElementById("promedio").value = "Por favor, ingresa valores numéricos en todos los campos.";
     }
     else {
-        alert('Por favor, ingrese valores válidos.');
+        // Calculo del promedio de los tres numeros ingresados usando una formula basica ((n1+n2+n3)/nt)
+        var calculoPromedio = ((valor1 + valor2 + valor3) / 3);
+        /**Impresion de resultado en la label promedio */
+        document.getElementById("ResultadoPromedio").value = calculoPromedio.toFixed(2);
     }
 }
-document.addEventListener('DOMContentLoaded', function () {
-    var calcularButton = document.getElementById('calcularButton');
-    if (calcularButton) {
-        calcularButton.addEventListener('click', function () { return calcularPromedio(); });
-    }
-    else {
-        console.error('El botón calcularButton no se encontró.');
-    }
-});

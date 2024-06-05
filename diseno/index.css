@@ -2,8 +2,76 @@ body {
     font-family: "Reddit Mono", monospace;
     font-weight: 400;
     font-style: normal;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1, h2{
+
+.diseñoheader {
+    width: 100%;
+    background-color: #1D3557;
+    box-sizing: border-box;
+}
+
+.contenido {
+    min-height: calc(100vh - 60px);
+    /* Ajusta según la altura de tu header */
+    background-image: url('https://i.redd.it/pixel-lakes-sunny-and-sunset-pixel-art-landscape-series-v0-3vciy9e2f0sb1.jpg?width=3840&format=pjpg&auto=webp&s=aba19dac3ecb5f9dcb51ef0459ca40654ab5bbcd');
+    background-size: cover;
+    /* Asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-position: center;
+    /* Centra la imagen de fondo */
+    padding: 5px;
+    /* Opcional, ajusta según tus necesidades */
+}
+
+h1,
+h2 {
     padding-top: 10px;
+    /* Corregido el espacio entre número y unidad */
     text-align: center;
+}
+
+h1 {
+    color: #738A94; /* Azul grisáceo */
+    
+}
+h2{
+    color: #E3F9E5;
+    
+}
+
+.color-card-left {
+    background-color: #F0F0F0; /* Gris claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    border-radius: 10px; /* Bordes redondeados para un diseño más suave */
+   padding: 10px;
+}
+.card-shadow{
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 15px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: -10px 0px 13px -7px #000000, 15px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #46077a 0%, #1F1C18 51%, #8d7c58 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
