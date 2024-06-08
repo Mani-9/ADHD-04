@@ -10,7 +10,7 @@ body {
 
 .diseñoheader {
     width: 100%;
-    background-color: #1D3557;
+    background-image: url("https://i.gzn.jp/img/2016/08/02/gamma-ray-bursts/s43.png");  
     box-sizing: border-box;
 }
 
@@ -65,7 +65,7 @@ h2{
     background-size: 200% auto;
     color: white;
     box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
+    border-radius: 25px;
     display: block;
 }
 
@@ -74,4 +74,17 @@ h2{
     /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
+}
+.navbar {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
 }
